@@ -7,6 +7,7 @@ const apiRoutes=require('./routes/index');
 // const {User} = require('./models/index');
 // const bcrypt = require('bcrypt');
 //const UserRepository = require('./repository/user-repository');
+// const UserService=require('./services/user-service')
 
 const app = express();
 
@@ -24,6 +25,12 @@ const prepareAndStartServer = ()=>{
         // const user = await User.findByPk(3);
         // const response = bcrypt.compareSync(incomingpassword,user.password);
         // console.log(response);
+        // const service = new UserService();
+        // const newToken = service.createToken({email:'shitanhu@admin.com',id:1});
+        // console.log("new token is",newToken);
+        //  const token='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNoaXRhbmh1QGFkbWluLmNvbSIsImlkIjoxLCJpYXQiOjE2OTI5MTI0MzEsImV4cCI6MTY5MjkxMjQ2MX0.KzTw3n5wbxKHTv7RpokKzGgRFt8g3XKdKU-BuVzv7oE'
+        //  const response = service.verifyToken(token);
+        //console.log(response);
     })
 }
 prepareAndStartServer();
